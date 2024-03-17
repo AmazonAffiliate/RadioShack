@@ -7,9 +7,14 @@
     <style>
         body {
             background-color: #e3001b; /* RadioShack red */
-	<marquee behavior="scroll" direction="up" loop="10" scrollamount="5"></marquee>
-		
         }
+
+        .scroll-container {
+            height: 100%;
+            overflow: hidden;
+            animation: scrollPage 10s linear infinite;
+        }
+
         .twitter-card {
             background-color: white;
             border: 1px solid #e1e8ed;
@@ -21,16 +26,19 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+
         .twitter-card img {
             max-width: 75%;
             border-radius: 8px;
             display: block;
             margin: 0 auto;
         }
+
         .twitter-card p {
             margin-top: 10px;
             text-align: center;
         }
+
         .twitter-card .buy-button {
             display: inline-block;
             padding: 8px 16px;
@@ -38,83 +46,93 @@
             background-color: #1da1f2;
             color: white;
             text-decoration: none;
-             margin-top: 10px;
+            margin-top: 10px;
         }
+
         .twitter-card .buy-button:hover {
             background-color: #0f81d8;
         }
 
-	.button-container {
-		text-align: center;
-	}
+        .button-container {
+            text-align: center;
+        }
 
-	.custom-button {
-  		background-color: #4CAF50; /* Green */
-  		border: none;
-  		color: white;
- 		 padding: 20px 40px;
-  		text-align: center;
- 		text-decoration: none;
-  		display: inline-block;
-  		font-size: 16px;
-  		margin: 4px 2px;
-  		border-radius: 50px; /* make it oval */
-  		cursor: pointer;
-	}
+        .custom-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 50px; /* make it oval */
+            cursor: pointer;
+        }
+
+        @keyframes scrollPage {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
     </style>
 </head>
 <body>
     <h1 style="color: white;">RadioShack Products! More Coming Soon</h1>
-    
-    <div class="twitter-card">
-        <h2>AAA Alkaline Batteries - 4-Pack</h2>
-        <a href="https://amzn.to/42Vvlc8" target="_blank"><img src="https://m.media-amazon.com/images/I/51DCffXo7ZL._AC_SY355_.jpg" alt="Product Image"></a>
-        <p>RadioShack AAA Alkaline Batteries - 4-Pack $7.99</p>
-        <a href="https://amzn.to/42Vvlc8" target="_blank" class="buy-button">Buy On Amazon</a>
+
+    <div class="scroll-container">
+        <div class="twitter-card">
+            <h2>AAA Alkaline Batteries - 4-Pack</h2>
+            <a href="https://amzn.to/42Vvlc8" target="_blank"><img src="https://m.media-amazon.com/images/I/51DCffXo7ZL._AC_SY355_.jpg" alt="Product Image"></a>
+            <p>RadioShack AAA Alkaline Batteries - 4-Pack $7.99</p>
+            <a href="https://amzn.to/42Vvlc8" target="_blank" class="buy-button">Buy On Amazon</a>
+        </div>
+
+        <div class="twitter-card">
+            <h2>AA Alkaline Batteries - 4-Pack</h2>
+            <a href="https://amzn.to/3ThgwxC" target="_blank"><img src="https://m.media-amazon.com/images/I/618XMuos-AL._AC_SY355_.jpg" alt="Product Image"></a>
+            <p>RadioShack AA Alkaline Batteries - 4-Pack $6.99</p>
+            <a href="https://amzn.to/3ThgwxC" target="_blank" class="buy-button">Buy On Amazon</a>
+        </div>
+
+        <div class="twitter-card">
+            <h2>Grid-Style PC Board with 371 Holes</h2>
+            <a href="https://amzn.to/48C2s6f" target="_blank"><img src="https://m.media-amazon.com/images/I/719D3x+6+AL._AC_SY450_.jpg" alt="Product Image"></a>
+            <p>Features solder-ringed holes.
+                Board dimensions are 1-27/32x2-27/32" $13.00</p>
+            <a href="https://amzn.to/48C2s6f" target="_blank" class="buy-button">Buy On Amazon</a>
+        </div>
+
+        <div class="twitter-card">
+            <h2>102dB Piezo Siren</h2>
+            <a href="https://amzn.to/4bU5ntO" target="_blank"><img src="https://m.media-amazon.com/images/I/614QRVg61+L._AC_SY355_.jpg" alt="Product Image"></a>
+            <p>RadioShack 102dB Piezo Siren
+                The siren is perfect for security systems, over and under-limit indicators and power failure alerts.
+                Operates on 6-14 VDC, with 150mA Current at 12V. Buzzer Tone rated at 2,000-4,500Hz $17.99</p>
+            <a href="https://amzn.to/4bU5ntO" target="_blank" class="buy-button">Buy On Amazon</a>
+        </div>
+
+        <div class="twitter-card">
+            <h2>CTR-121 Desktop Cassette Recorder</h2>
+            <a href="https://amzn.to/48zNFsA" target="_blank"><img src="https://m.media-amazon.com/images/I/71jKCvbW2OL._AC_SX355_.jpg" alt="Product Image"></a>
+            <p>Voice-activated (VOX) recording-capable
+                Auto stop helps prevent wear and tear on tapes
+                Jacks for DC, earphone, microphone and remote control
+                item weight is 2.2 pounds
+                Comes with recorder, power cord, user's guide and safety instructions $79.95</p>
+            <a href="https://amzn.to/48zNFsA" target="_blank" class="buy-button">Buy On Amazon</a>
+        </div>
     </div>
 
-    <div class="twitter-card">
-        <h2>AA Alkaline Batteries - 4-Pack</h2>
-        <a href="https://amzn.to/3ThgwxC" target="_blank"><img src="https://m.media-amazon.com/images/I/618XMuos-AL._AC_SY355_.jpg" alt="Product Image"></a>
-        <p>RadioShack AA Alkaline Batteries - 4-Pack $6.99</p>
-        <a href="https://amzn.to/3ThgwxC" target="_blank" class="buy-button">Buy On Amazon</a>
+    <div class="button-container">
+        <a href="https://www.solarquote.com?campaign=ambassador&name=CTL100" target="_blank" class="custom-button">Get A Free Solar Quote</a>
     </div>
 
-    <div class="twitter-card">
-        <h2>Grid-Style PC Board with 371 Holes</h2>
-        <a href="https://amzn.to/48C2s6f" target="_blank"><img src="https://m.media-amazon.com/images/I/719D3x+6+AL._AC_SY450_.jpg" alt="Product Image"></a>
-        <p>Features solder-ringed holes.
-Board dimensions are 1-27/32x2-27/32" $13.00</p>
-        <a href="https://amzn.to/48C2s6f" target="_blank" class="buy-button">Buy On Amazon</a>
-    </div>
+    <iframe src="https://www.solarquote.com?campaign=ambassador&name=CTL100" width="100%" height="500px" frameborder="0" scrolling="auto"></iframe>
 
-    <div class="twitter-card">
-        <h2>102dB Piezo Siren</h2>
-        <a href="https://amzn.to/4bU5ntO" target="_blank"><img src="https://m.media-amazon.com/images/I/614QRVg61+L._AC_SY355_.jpg" alt="Product Image"></a>
-        <p>RadioShack 102dB Piezo Siren
-The siren is perfect for security systems, over and under-limit indicators and power failure alerts.
-Operates on 6-14 VDC, with 150mA Current at 12V. Buzzer Tone rated at 2,000-4,500Hz $17.99</p>
-        <a href="https://amzn.to/4bU5ntO" target="_blank" class="buy-button">Buy On Amazon</a>
-    </div>
-
-    <div class="twitter-card">
-        <h2>CTR-121 Desktop Cassette Recorder</h2>
-        <a href="https://amzn.to/48zNFsA" target="_blank"><img src="https://m.media-amazon.com/images/I/71jKCvbW2OL._AC_SX355_.jpg" alt="Product Image"></a>
-        <p>Voice-activated (VOX) recording-capable
-Auto stop helps prevent wear and tear on tapes
-Jacks for DC, earphone, microphone and remote control
-item weight is 2.2 pounds
-Comes with recorder, power cord, user's guide and safety instructions $79.95</p>
-        <a href="https://amzn.to/48zNFsA" target="_blank" class="buy-button">Buy On Amazon</a>
-    </div>
-
-	<div class="button-container">
-  <a href="https://www.solarquote.com?campaign=ambassador&name=CTL100" target="_blank" class="custom-button">Get A Free Solar Quote</a>
-	</div>
-
-	<iframe src="https://www.solarquote.com?campaign=ambassador&name=CTL100" width="100%" height="500px" frameborder="0" scrolling="auto"></iframe>
-
-    <!-- Repeat similar structure for other products -->
-	
 </body>
 </html>
