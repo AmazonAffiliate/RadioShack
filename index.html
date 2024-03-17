@@ -71,13 +71,10 @@
             cursor: pointer;
         }
 
-        @keyframes scrollPage {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-100%);
-            }
+        .scroll-container {
+            height: 100%;
+            overflow: hidden;
+            animation: scrollPage 10s linear; /* Only scroll once */
         }
     </style>
 </head>
@@ -131,7 +128,7 @@
             <a href="https://www.solarquote.com?campaign=ambassador&name=CTL100" target="_blank" class="custom-button">Get A Free Solar Quote</a>
         </div>
 
-        <iframe src="https://www.solarquote.com?campaign=ambassador&name=CTL100" width="100%" height="500px" frameborder="0" scrolling="auto"></iframe>
+        <iframe src="https://www.solarquote.com?campaign=ambassador&name=CTL100" width="100%" height="600px" frameborder="0" ></iframe>
         </div>
 </body>
 </html>
